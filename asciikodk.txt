@@ -1,0 +1,7 @@
+sima fal 186
+fenti bal kanyar 187 -u
+also bal kanyar 188 -i
+felso jobb kanyar 201 -o
+also jobb kanyar 200 -y
+vizszintes 205 - 3
+fuggoleges 186 - 4
