@@ -19,6 +19,10 @@ int main()
 	startTime = time(NULL);
 	int index = 1;
 	char** palya;
+	//printf(“\033[0; 31m”);
+	printf("\033[1;31m");
+	char i = 254;
+	printf("\n\n%c\n\n", i);
 	palya = beolvasPalya("be.txt");
 	int elozoX, elozoY;
 	int jatekosX = 1, jatekosY = 1;
