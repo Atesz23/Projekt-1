@@ -14,12 +14,15 @@
 #include <stdbool.h>
 
 char** beolvasPalya(const char* fajlNev);
-void kirajzolPalya(char** palya, int hossz, int szel);
+void kirajzolPalya(char** palya, int hossz, int szel,int lepesekszama);
 void piros();
 void sarga();
 void reset();
 void ora();
 void delay(int ms);
 bool jobbraszabad(char** palya, int playerX, int playerY);
+void zold();
+int iranyitas(char**palya,int hossz,int szel);
+bool level1teljes(char** palya,int hossz, int szel);
 
 #endif

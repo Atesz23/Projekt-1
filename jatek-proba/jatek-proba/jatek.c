@@ -12,7 +12,6 @@ char** beolvasPalya(const char* fajlNev)
 	}
 	fscanf(fin, "%i%i\n", &hossz, &szel);
 	char** palya = (char**)(calloc(hossz, sizeof(char*)));
-	//ellenorzes
 	for (int i = 0; i < hossz; ++i) {
 		palya[i] = (char*)(calloc(szel, sizeof(char)));
 	}
@@ -24,7 +23,7 @@ char** beolvasPalya(const char* fajlNev)
 	return palya;
 }
 
-void kirajzolPalya(char** palya,int hossz,int szel)
+void kirajzolPalya(char** palya, int hossz, int szel, int lepesekszama)
 {
 	for (int i = 0; i < hossz; ++i) {
 		for (int j = 0; j < szel; ++j) {
@@ -36,7 +35,7 @@ void kirajzolPalya(char** palya,int hossz,int szel)
 			{
 				printf("%c", 188);
 			}
-			if (palya[i][j] == 'o')
+			if (palya[i][j] == 'O')
 			{
 				printf("%c", 201);
 			}
@@ -56,7 +55,7 @@ void kirajzolPalya(char** palya,int hossz,int szel)
 				printf(" ");
 			}
 			if (palya[i][j] == '1') {
-				printf("*");
+				printf("%c", 219);
 			}
 			if (palya[i][j] == 'R') {
 				printf("X");
@@ -71,19 +70,20 @@ void kirajzolPalya(char** palya,int hossz,int szel)
 				printf("%c", 219);
 				reset();
 			}
+			//printf("%c", palya[i][j]);
 		}
 		printf("\n");
+		
 	}
+	printf("A hatralevo lepesek szama: %i", lepesekszama);
 }
 
-void piros()
-{
+void piros(){
 	printf("\033[1;31m");
 }
 void reset() {
 	printf("\033[0m");
 }
-
 void ora()
 {
 	int ido = 10;
@@ -113,4 +113,94 @@ void delay(ms)
 void sarga()
 {
 	printf("\033[1;33m");
+}
+void zold() {
+	printf("\033[0;32m");
+}
+int iranyitas(char** palya,int hossz,int szel)
+{
+	int regiX, regiY;
+	int playerX = 1, playerY = 1;
+	int lepesekszama = 12;
+	int db = 0;
+	while (1)
+	{
+		kirajzolPalya(palya, hossz, szel, lepesekszama);
+		char irany = getch();
+		regiX = playerX;
+		regiY = playerY;
+		if (irany == 'd')
+		{
+			while (palya[playerX][playerY + 1] == '0' || palya[playerX][playerY + 1] == 'g')
+			{
+				palya[playerX][playerY] = 'g';
+				playerY++;
+			}
+		}
+		else if (irany == 'a')
+		{
+			while (palya[playerX][playerY - 1] == '0' || palya[playerX][playerY - 1] == 'g')
+			{
+				palya[playerX][playerY] = 'g';
+				playerY--;
+
+			}
+		}
+		else if (irany == 's')
+		{
+			while (palya[playerX + 1][playerY] == '0' || palya[playerX + 1][playerY] == 'g')
+			{
+				palya[playerX][playerY] = 'g';
+				playerX++;
+			}
+		}
+		else if (irany == 'w')
+		{
+			while (palya[playerX - 1][playerY] == '0' || palya[playerX - 1][playerY] == 'g')
+			{
+				palya[playerX][playerY] = 'g';
+				playerX--;
+			}
+		}
+		if (palya[playerX][playerY] == '0' || palya[playerX][playerY] == 'g')
+		{
+			palya[playerX][playerY] = 'P';
+			palya[regiX][regiY] = 'g';
+			lepesekszama--;
+		}
+		system("cls");
+		if (level1teljes(palya, 8, 9))
+		{
+			system("cls");
+			piros();
+			printf("\n\n\n          SIKER");
+			reset();
+			delay(1000);
+			system("cls");
+			return 1;
+		}
+		if (lepesekszama < 0)
+		{
+			system("cls");
+			piros();
+			printf("\n\n\n          GAME OVER");
+			reset();
+			delay(1000);
+			system("cls");
+			return 0;
+		}
+	}
+}
+bool level1teljes(char** palya,int hossz, int szel)
+{
+	int db = 0;
+	for (int i = 0; i < hossz; i++)
+	{
+		for (int j = 0; j < szel; j++)
+		{
+			if (palya[i][j] == 'g') db++;
+		}
+	}
+	if (db == 30) return true;
+	else return false;
 }
