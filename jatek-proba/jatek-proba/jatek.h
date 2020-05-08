@@ -13,6 +13,7 @@
 #include <conio.h> //kbhit,geth();
 #include <stdbool.h>
 
+
 char** beolvasPalya(const char* fajlNev);
 void kirajzolPalya(char** palya, int hossz, int szel,int lepesekszama);
 void piros();
@@ -20,9 +21,13 @@ void sarga();
 void reset();
 void ora();
 void delay(int ms);
-bool jobbraszabad(char** palya, int playerX, int playerY);
 void zold();
+void cyan();
+void kek();
 int iranyitas(char**palya,int hossz,int szel);
+int iranyitas2(char** palya, int hossz, int szel);
 bool level1teljes(char** palya,int hossz, int szel);
-
+bool level2teljes(char** palya, int hossz, int szel);
+void menukiir();
+void jatekleiras();
 #endif

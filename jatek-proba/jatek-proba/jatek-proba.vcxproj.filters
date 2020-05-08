@@ -31,5 +31,11 @@
     <Text Include="be.txt">
       <Filter>Source Files</Filter>
     </Text>
+    <Text Include="Start_menu.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="lvl2.txt">
+      <Filter>Source Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>
