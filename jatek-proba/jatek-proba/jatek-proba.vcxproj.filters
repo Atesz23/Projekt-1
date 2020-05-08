@@ -37,5 +37,8 @@
     <Text Include="lvl2.txt">
       <Filter>Source Files</Filter>
     </Text>
+    <Text Include="lvl3.txt">
+      <Filter>Source Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>

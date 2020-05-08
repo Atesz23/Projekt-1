@@ -261,6 +261,80 @@ int iranyitas2(char** palya, int hossz, int szel)
 		}
 	}
 }
+int iranyitas3(char** palya, int hossz, int szel)
+{
+	int regiX, regiY;
+	int playerX = 6, playerY = 1;
+	int lepesekszama1 = 44;
+	int db = 0;
+	while (1)
+	{
+		kirajzolPalya(palya, hossz, szel, lepesekszama1);
+		char irany = getch();
+		regiX = playerX;
+		regiY = playerY;
+		if (irany == 'd')
+		{
+			while (palya[playerX][playerY + 1] == '0' || palya[playerX][playerY + 1] == 'g')
+			{
+				palya[playerX][playerY] = 'g';
+				playerY++;
+			}
+		}
+		else if (irany == 'a')
+		{
+			while (palya[playerX][playerY - 1] == '0' || palya[playerX][playerY - 1] == 'g')
+			{
+				palya[playerX][playerY] = 'g';
+				playerY--;
+
+			}
+		}
+		else if (irany == 's')
+		{
+			while (palya[playerX + 1][playerY] == '0' || palya[playerX + 1][playerY] == 'g')
+			{
+				palya[playerX][playerY] = 'g';
+				playerX++;
+			}
+		}
+		else if (irany == 'w')
+		{
+			while (palya[playerX - 1][playerY] == '0' || palya[playerX - 1][playerY] == 'g')
+			{
+				palya[playerX][playerY] = 'g';
+				playerX--;
+			}
+		}
+		if (palya[playerX][playerY] == '0' || palya[playerX][playerY] == 'g')
+		{
+			palya[playerX][playerY] = 'P';
+			palya[regiX][regiY] = 'g';
+			lepesekszama1--;
+		}
+		system("cls");
+		if (level3teljes(palya, 15, 15))
+		{
+			system("cls");
+			piros();
+			printf("\n\n\n          SIKER");
+			reset();
+			delay(1000);
+			system("cls");
+			return 1;
+		}
+		if (lepesekszama1 < 0)
+		{
+			system("cls");
+			piros();
+			printf("\n\n\n          GAME OVER");
+			reset();
+			delay(1000);
+			system("cls");
+			return 0;
+		}
+	}
+}
 bool level1teljes(char** palya,int hossz, int szel)
 {
 	int db = 0;
@@ -285,6 +359,19 @@ bool level2teljes(char** palya, int hossz, int szel)
 		}
 	}
 	if (db == 99) return true;
+	else return false;
+}
+bool level3teljes(char** palya, int hossz, int szel)
+{
+	int db = 0;
+	for (int i = 0; i < hossz; i++)
+	{
+		for (int j = 0; j < szel; j++)
+		{
+			if (palya[i][j] == 'g') db++;
+		}
+	}
+	if (db == 97) return true;
 	else return false;
 }
 void menukiir()

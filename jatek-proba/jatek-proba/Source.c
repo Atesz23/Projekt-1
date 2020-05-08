@@ -31,6 +31,15 @@ fomenu:
 				}
 				else goto level2;
 			level3:
+				printf("LEVEL3");
+				delay(1000);
+				system("cls");
+				palya1 = beolvasPalya("lvl3.txt");
+				if (iranyitas3(palya1, 15, 15) == 1)
+				{
+					printf("vege");
+				}
+				else goto level3;
 				break;
 		case 2:
 			jatekleiras();

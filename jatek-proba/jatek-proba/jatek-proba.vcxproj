@@ -147,6 +147,7 @@
   <ItemGroup>
     <Text Include="be.txt" />
     <Text Include="lvl2.txt" />
+    <Text Include="lvl3.txt" />
     <Text Include="Start_menu.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
