@@ -1,0 +1,3 @@
+﻿  jatek.c
+C:\Users\attil\source\repos\jatek_color\jatek-proba\jatek-proba\jatek.c(533,11): warning C4098: 'menukiir': 'void' function returning a value
+  jatek-proba.vcxproj -> C:\Users\attil\source\repos\jatek_color\jatek-proba\Debug\jatek-proba.exe

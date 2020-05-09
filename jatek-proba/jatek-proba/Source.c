@@ -5,6 +5,7 @@ int main()
 {
 	char** palya;
 	char** palya1;
+	printf("szia");
 fomenu:
 	menukiir();
 	int valasztas=0;

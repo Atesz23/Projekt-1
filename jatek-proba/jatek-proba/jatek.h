@@ -27,6 +27,7 @@ void kek();
 int iranyitas(char**palya,int hossz,int szel);
 int iranyitas2(char** palya, int hossz, int szel);
 int iranyitas3(char** palya, int hossz, int szel);
+int jatek(char** palya, int hossz, int szel, int playerX, int playerY, int lepesekszama);
 bool level1teljes(char** palya,int hossz, int szel);
 bool level2teljes(char** palya, int hossz, int szel);
 bool level3teljes(char** palya, int hossz, int szel);

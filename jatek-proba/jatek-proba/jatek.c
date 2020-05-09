@@ -335,6 +335,10 @@ int iranyitas3(char** palya, int hossz, int szel)
 		}
 	}
 }
+int jatek(char** palya, int hossz, int szel, int playerX, int playerY, int lepesekszama)
+{
+	return 0;
+}
 bool level1teljes(char** palya,int hossz, int szel)
 {
 	int db = 0;

@@ -1,1 +1,5 @@
-﻿LINK : fatal error LNK1168: cannot open C:\Users\attil\Documents\GitHub\Projekt-1\jatek-proba\Debug\jatek-proba.exe for writing
+﻿  Source.c
+  jatek.c
+C:\Users\attil\Documents\GitHub\Projekt-1\jatek-proba\jatek-proba\jatek.c(388,11): warning C4098: 'menukiir': 'void' function returning a value
+  Generating Code...
+LINK : fatal error LNK1168: cannot open C:\Users\attil\Documents\GitHub\Projekt-1\jatek-proba\Debug\jatek-proba.exe for writing
