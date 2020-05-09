@@ -1,2 +1,1 @@
-﻿  Source.c
-  jatek-proba.vcxproj -> C:\Users\attil\Documents\GitHub\Projekt-1\jatek-proba\Debug\jatek-proba.exe
+﻿LINK : fatal error LNK1168: cannot open C:\Users\attil\Documents\GitHub\Projekt-1\jatek-proba\Debug\jatek-proba.exe for writing

@@ -45,7 +45,7 @@ fomenu:
 			jatekleiras();
 			goto fomenu;
 			break;
-		case 3: 
+		case 3:
 			return 0;
 			break;
 		default:
