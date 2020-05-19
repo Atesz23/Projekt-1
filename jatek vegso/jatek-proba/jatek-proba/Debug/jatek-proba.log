@@ -1,9 +1,0 @@
-﻿  jatek.c
-C:\Users\attil\Documents\GitHub\Projekt-1\jatek vegso\jatek-proba\jatek-proba\jatek.c(531,11): warning C4098: 'menukiir': 'void' function returning a value
-C:\Users\attil\Documents\GitHub\Projekt-1\jatek vegso\jatek-proba\jatek-proba\jatek.c(607,11): warning C4098: 'jatekvege': 'void' function returning a value
-C:\Users\attil\Documents\GitHub\Projekt-1\jatek vegso\jatek-proba\jatek-proba\jatek.c(652,10): warning C4098: 'vege': 'void' function returning a value
-  Source.c
-C:\Users\attil\Documents\GitHub\Projekt-1\jatek vegso\jatek-proba\jatek-proba\Source.c(79,44): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\attil\Documents\GitHub\Projekt-1\jatek vegso\jatek-proba\jatek-proba\Source.c(80,14): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
-  Generating Code...
-  jatek-proba.vcxproj -> C:\Users\attil\Documents\GitHub\Projekt-1\jatek vegso\jatek-proba\Debug\jatek-proba.exe

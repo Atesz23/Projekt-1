@@ -1,0 +1,4 @@
+﻿  Source.c
+C:\Users\attil\source\repos\jatek_color\jatek-proba\jatek-proba\Source.c(79,44): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\attil\source\repos\jatek_color\jatek-proba\jatek-proba\Source.c(80,14): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
+  jatek-proba.vcxproj -> C:\Users\attil\source\repos\jatek_color\jatek-proba\Debug\jatek-proba.exe
